@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N5QGDGRFS6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N5QGDGRFS6');
+</script>
+<meta charset="UTF-8">
+<title>Feliz Cumpleaños Kar 🎉</title>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff9ecf, #c084fc);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-top: 40px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  }
+
+  .typing {
+    font-size: 1.4em;
+    margin: 30px auto;
+    width: 80%;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(45,end), blink .8s infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 80% }
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+
+  #frases {
+    font-size: 1.3em;
+    height: 50px;
+    margin-top: 20px;
+  }
+
+  button {
+    margin-top: 40px;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4fa3;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+  button:hover {
+    transform: scale(1.08);
+    background: #ff7bc3;
+  }
+
+  #mensajeCompleto {
+    display: none;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+    margin: 40px auto;
+    max-width: 850px;
+    padding: 30px;
+    background: rgba(0,0,0,0.35);
+    border-radius: 20px;
+    font-size: 1.2em;
+    line-height: 1.8em;
+  }
+
+  #mensajeCompleto.mostrar {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #lista {
+    display: none;
+    margin: 40px auto;
+    max-width: 700px;
+    padding: 25px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    text-align: left;
+    font-size: 1.1em;
+  }
+
+  #lista ul {
+    list-style: "⭐ ";
+    padding-left: 20px;
+  }
+
+  .estrella {
+    position: absolute;
+    color: rgba(255,255,255,0.8);
+    animation: flotar 10s linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes flotar {
+    from {
+      transform: translateY(100vh) rotate(0deg);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-10vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+</style>
+</head>
+
+<body>
+
+<h1>🎂 Feliz Cumpleaños Kar 🎂</h1>
+
+<div class="typing">
+  22 años tiene la criatura
+</div>
+
+<div id="frases"></div>
+
+<button onclick="mostrarCarta()">
+  Cancer Tienes Andy 
+</button>
+
+<div id="mensajeCompleto">
+
+  <p><strong>Kar... Karz... Andy xd</strong></p>
+
+  <p>
+    Feliz cumpleaños Andy, ya no tienes Cancer? JAJAAJ espero que hoy te la pases muy bien, acompañada de tus seres queridos y eso, es muy divertido pasar tiempo contigo, jugando, viendo Violenta y las pelis del MCU, es muy Goty, y ojala sigamos viendo más cosass en el futuro 
+  </p>
+
+  <p>
+        Gracias por agauantarme Andy jasjasj se te tkm
+  </p>
+
+
+
+  <p>
+    Feliz cumpleaños
+  </p>
+
+  <p>
+    — Andy
+  </p>
+
+</div>
+
+<div id="lista">
+
+  <h2>Tienes cancer Andy, mira estas cosas que te hacen serlo. </h2>
+
+  <ul>
+    <li>Que te gusta Iron Man</li>
+    <li>Cómo conviertes cualquier conversación en algo divertido.</li>
+    <li>Tu risa esta god.</li>
+    <li>Que puedas pasar horas viendo películas sin aburrirte.</li>
+    <li>Que siempre sale algún chiste interno nuevo contigo.</li>
+    <li>Que le tires Hate a Tomas y yo  le tiro hate a todos.</li>
+    <li>Camarón que se duerme... amanece en un zapato</li>
+  </ul>
+
+</div>
+
+<audio id="musica" loop>
+  <source src="https://doiker380.github.io/Yuri03/music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+const frases = [
+  "Iron Man es mejor que la mandarina??? jsjas",
+  "Cancer tienes Andy",
+  "Marvel + Andy = God",
+  "Violenta es cine ",
+  "22 años Andyyyyyy"
+];
+
+let index = 0;
+const frasesDiv = document.getElementById("frases");
+
+setInterval(() => {
+  frasesDiv.textContent = frases[index];
+  index = (index + 1) % frases.length;
+}, 3000);
+
+function mostrarCarta() {
+  const carta = document.getElementById("mensajeCompleto");
+
+  carta.classList.add("mostrar");
+
+  document.getElementById("lista").style.display = "block";
+
+  document.getElementById("musica").play();
+}
+
+function crearEstrella() {
+  const estrella = document.createElement("div");
+
+  estrella.classList.add("estrella");
+
+  estrella.style.left = Math.random() * 100 + "vw";
+
+  estrella.style.fontSize =
+    (Math.random() * 20 + 15) + "px";
+
+  estrella.textContent = "✦";
+
+  document.body.appendChild(estrella);
+
+  setTimeout(() => {
+    estrella.remove();
+  }, 10000);
+}
+
+setInterval(crearEstrella, 500);
+
+</script>
+
+</body>
+</html>
